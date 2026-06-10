@@ -1,31 +1,41 @@
+const users = [
+  {
+    id: "410544b2-4001-4271-9855-fec4b6a6442a",
+    email: "hero34@mail.ru",
+    user_name: "Ярослав",
+    user_password: "secretpassw1",
+    contacts: "89191202527",
+  },
+];
+
 const categories = [
   {
-    id: 1,
+    id: "d6e15727-9fe1-4961-8c5b-ea48a9bd81aa",
     category_name: "Доски и лыжи",
     character_code: "boards",
   },
   {
-    id: 2,
+    id: "d6e15727-9fe1-4761-8c5b-ea44a9bd81aa",
     category_name: "Крепления",
     character_code: "attachment",
   },
   {
-    id: 3,
+    id: "d6e15727-9fe1-4961-8c5b-ea74a9bd81aa",
     category_name: "Ботинки",
     character_code: "boots",
   },
   {
-    id: 4,
+    id: "u6e15727-9fe1-4961-8c5b-ea44a9bd81aa",
     category_name: "Одежда",
     character_code: "clothing",
   },
   {
-    id: 5,
+    id: "d6h15727-9fe1-4961-8c5b-ea44a9bd81aa",
     category_name: "Инструменты",
     character_code: "tools",
   },
   {
-    id: 6,
+    id: "d6e15727-9fe1-4981-8c5b-ea44a9bd81aa",
     category_name: "Разное",
     character_code: "other",
   },
@@ -33,53 +43,49 @@ const categories = [
 
 const lots = [
   {
-    id: 1,
+    id: "d6e15727-9fe1-4961-8c5b-ea44a9bd81aa",
     title: "2014 Rossignol District Snowboard",
-    category: "Доски и лыжи",
-    start_price: 10999,
+    lot_description:
+      "Легкий маневренный сноуборд, готовый дать жару в любом парке",
     img_url: "img/lot-1.jpg",
-    date_finish: "2026-06-09",
-  },
-  {
-    id: 2,
-    title: "DC Ply Mens 2016/2017 Snowboard",
-    category: "Доски и лыжи",
-    start_price: 15999,
-    img_url: "img/lot-2.jpg",
-    date_finish: "2026-06-10",
-  },
-  {
-    id: 3,
-    title: "Крепления Union Contact Pro 2015 года размер L/XL",
-    category: "Крепления",
-    start_price: 8000,
-    img_url: "img/lot-3.jpg",
-    date_finish: "2026-06-11",
-  },
-  {
-    id: 4,
-    title: "Куртка для сноуборда DC Mutiny Charocal",
-    category: "Одежда",
-    start_price: 7500,
-    img_url: "img/lot-5.jpg",
-    date_finish: "2026-06-12",
-  },
-  {
-    id: 5,
-    title: "Маска Oakley Canopy",
-    category: "Разное",
-    start_price: 5400,
-    img_url: "img/lot-6.jpg",
-    date_finish: "2026-06-13",
-  },
-  {
-    id: 6,
-    title: "Ботинки для сноуборда DC Mutiny Charocal",
-    category: "Ботинки",
     start_price: 10999,
-    img_url: "img/lot-4.jpg",
-    date_finish: "2026-06-14",
+    date_finish: "2026-06-10",
+    step: 500,
+    category_id: "d6e15727-9fe1-4961-8c5b-ea48a9bd81aa",
+    user_id: "410544b2-4001-4271-9855-fec4b6a6442a",
+  },
+  {
+    id: "3958dc9e-712f-4377-85e9-fec4b6a6442a",
+    title: "DC Ply Mens 2016/2017 Snowboard",
+    lot_description:
+      "Легкий маневренный сноуборд, готовый дать жару в любом парке",
+    img_url: "img/lot-2.jpg",
+    start_price: 159999,
+    date_finish: "2026-06-11",
+    step: 1000,
+    category_id: "d6e15727-9fe1-4961-8c5b-ea48a9bd81aa",
+    user_id: "410544b2-4001-4271-9855-fec4b6a6442a",
+  },
+  {
+    id: "3958dc9e-742f-4377-85e9-fec4b6a6442a",
+    title: "Крепления Union Contact Pro 2015 года размер L/XL",
+    lot_description: "Хорошие крепления, надежные и легкие",
+    img_url: "img/lot-3.jpg",
+    start_price: 8000,
+    date_finish: "2026-06-12",
+    step: 500,
+    category_id: "d6e15727-9fe1-4761-8c5b-ea44a9bd81aa",
+    user_id: "410544b2-4001-4271-9855-fec4b6a6442a",
   },
 ];
 
-export { categories, lots };
+const bets = [
+  {
+    id: "3958dc9e-742f-4377-25e9-fec4b6a6442a",
+    price_bet: 8500,
+    user_id: "410544b2-4001-4271-9855-fec4b6a6442a",
+    lot_id: "3958dc9e-742f-4377-85e9-fec4b6a6442a",
+  },
+];
+
+export { categories, lots, users, bets };
