@@ -1,5 +1,5 @@
 export type Lot = {
-  id: number;
+  id: string;
   title: string;
   category: string;
   start_price: number;

@@ -79,13 +79,4 @@ const lots = [
   },
 ];
 
-const bets = [
-  {
-    id: "3958dc9e-742f-4377-25e9-fec4b6a6442a",
-    price_bet: 8500,
-    user_id: "410544b2-4001-4271-9855-fec4b6a6442a",
-    lot_id: "3958dc9e-742f-4377-85e9-fec4b6a6442a",
-  },
-];
-
-export { categories, lots, users, bets };
+export { categories, lots, users };
