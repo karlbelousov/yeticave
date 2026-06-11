@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 export default function LotCard({
   title,
-  category,
+  category_id,
   img_url,
   start_price,
   date_finish,
@@ -21,7 +21,7 @@ export default function LotCard({
         <Image src={`/${img_url}`} width={350} height={260} alt={title} />
       </div>
       <div className="lot__info">
-        <span className="lot__category">{category}</span>
+        <span className="lot__category">{category_id}</span>
         <h3 className={`lot__title ${openSans700.className}`}>
           <Link className="text-link" href="/lot">
             {title}
