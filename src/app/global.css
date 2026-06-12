@@ -37,6 +37,7 @@ body {
 a {
   text-decoration: none;
 }
+
 /*  проверить все элементы h2 по проекту */
 h2 {
   margin: 0;
@@ -387,6 +388,27 @@ main.container {
   background-color: #45abde;
 }
 
+.nav__list-sceleton {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__item-sceleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 72px;
+}
+
+.nav__link-sceleton {
+  width: 80px;
+  height: 26px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+}
+
 .main-footer .nav__item a {
   padding: 23px 10px;
 }
@@ -491,6 +513,30 @@ main.container {
   border: none;
   z-index: 2;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+}
+
+.promo__list-sceleton {
+  display: flex;
+  flex-wrap: wrap;
+  width: 542px;
+  height: 140px;
+}
+
+.promo__item-sceleton {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 70px;
+  border-radius: 12px;
+  background-color: rgba(243, 244, 246, 1);
+}
+
+.promo__link-sceleton {
+  width: 80px;
+  height: 26px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+  margin-inline: 20px;
 }
 
 /* Список лотов */
@@ -647,6 +693,57 @@ main.container {
 .timer--win::before,
 .timer--end::before {
   display: none;
+}
+
+.lots__list-sceleton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.lot__sceleton {
+  width: 350px;
+  height: 461px;
+  border-radius: 12px;
+  background-color: rgba(243, 244, 246, 1);
+}
+
+.lot__category-sceleton {
+  width: 45px;
+  height: 17px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+}
+
+.lot__title-sceleton {
+  width: 290px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(229, 231, 235, 1);
+  margin-bottom: 15px;
+}
+
+.lot__amount-sceleton {
+  width: 87px;
+  height: 17px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+  margin-bottom: 10px;
+}
+
+.lot__cost-sceleton {
+  width: 95px;
+  height: 28px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+}
+
+.lot__timer-sceleton {
+  width: 78px;
+  height: 28px;
+  border-radius: 6px;
+  background-color: rgba(229, 231, 235, 1);
+  margin-top: auto;
 }
 
 /* Пагинация */

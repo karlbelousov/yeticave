@@ -1,7 +1,9 @@
+import { fetchLots } from "@/lib/data";
 import LotCard from "./LotCard";
-import { lots } from "@/lib/placeholder-data";
 
-export default function LotList() {
+export default async function LotsList() {
+  const lots = await fetchLots();
+  
   return (
     <ul className="lots__list">
       {lots.map((lot) => (

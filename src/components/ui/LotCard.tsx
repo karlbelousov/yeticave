@@ -7,8 +7,9 @@ import getTimeLeft from "@/utils/getTimeLeft";
 import clsx from "clsx";
 
 export default function LotCard({
+  id,
   title,
-  category_id,
+  category_name,
   img_url,
   start_price,
   date_finish,
@@ -21,9 +22,9 @@ export default function LotCard({
         <Image src={`/${img_url}`} width={350} height={260} alt={title} />
       </div>
       <div className="lot__info">
-        <span className="lot__category">{category_id}</span>
+        <span className="lot__category">{category_name}</span>
         <h3 className={`lot__title ${openSans700.className}`}>
-          <Link className="text-link" href="/lot">
+          <Link className="text-link" href={`/lot/${id}`}>
             {title}
           </Link>
         </h3>

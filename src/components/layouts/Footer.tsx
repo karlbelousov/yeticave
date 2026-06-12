@@ -1,21 +1,19 @@
 import Link from "next/link";
-import { categories } from "@/lib/placeholder-data";
+import { Suspense } from "react";
+import NavList from "../ui/NavList";
+import NavListSceleton from "../sceletons/NavListSceleton";
 
 export default async function Footer() {
   return (
     <footer className="main-footer">
       <nav className="nav">
-        <ul className="nav__list container">
-          {categories.map(({ id, category_name }) => (
-            <li className="nav__item" key={id}>
-              <Link href="/lot/all">{category_name}</Link>
-            </li>
-          ))}
-        </ul>
+        <Suspense fallback={<NavListSceleton />}>
+          <NavList />
+        </Suspense>
       </nav>
       <div className="main-footer__bottom container">
         <div className="main-footer__copyright">
-          <p>© 2019, YetiCave</p>
+          <p>© 2026, YetiCave</p>
           <p>Интернет-аукцион сноубордического и горнолыжного снаряжения</p>
         </div>
         <div className="main-footer__social social">

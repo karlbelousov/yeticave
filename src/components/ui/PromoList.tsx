@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { categories } from "@/lib/placeholder-data";
 import { clsx } from "clsx";
+import { fetchCategories } from "@/lib/data";
 
-export default function PromoList() {
+export default async function PromoList() {
+  const categories = await fetchCategories();
+  
   return (
     <ul className="promo__list">
       {categories.map(({ id, category_name, character_code }) => (
@@ -13,7 +15,7 @@ export default function PromoList() {
           )}
           key={id}
         >
-          <Link className="promo__link" href="/lot/all">
+          <Link className="promo__link" href={`/category/${id}`}>
             {category_name}
           </Link>
         </li>
