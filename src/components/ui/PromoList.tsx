@@ -7,7 +7,7 @@ export default async function PromoList() {
   
   return (
     <ul className="promo__list">
-      {categories.map(({ id, category_name, character_code }) => (
+      {categories.map(({ id, name_category, character_code }) => (
         <li
           className={clsx(
             "promo__item",
@@ -16,7 +16,7 @@ export default async function PromoList() {
           key={id}
         >
           <Link className="promo__link" href={`/category/${id}`}>
-            {category_name}
+            {name_category}
           </Link>
         </li>
       ))}

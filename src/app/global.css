@@ -580,15 +580,9 @@ main.container {
 }
 
 .lots__list {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -599,7 +593,6 @@ main.container {
 }
 
 .lot {
-  margin-bottom: 30px;
   background-color: #ffffff;
 }
 
@@ -1113,6 +1106,73 @@ input:invalid .form__error {
   align-self: flex-end;
   padding: 6px 20px 7px;
   height: 38px;
+}
+
+.lot-sceleton {
+  padding-top: 50px;
+}
+
+.lot-sceleton__title {
+  width: 500px;
+  height: 35px;
+  border-radius: 12px;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 25px;
+}
+
+.lot-sceleton__content {
+  display: grid;
+  grid-template-columns: 730px 350px;
+  gap: 20px;
+}
+
+.lot-sceleton__left {
+  width: 730px;
+  height: 753px;
+}
+
+.lot-sceleton__image {
+  width: 730px;
+  height: 550px;
+  border-radius: 12px;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 20px;
+}
+
+.lot-sceleton__category {
+  width: 140px;
+  height: 17px;
+  border-radius: 6px;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 12px;
+}
+
+.lot-sceleton__descr {
+  width: 730px;
+  height: 26px;
+  border-radius: 6px;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 12px;
+}
+
+.lot-sceleton__right {
+  width: 350px;
+  height: 753px;
+}
+
+.lot-sceleton__state {
+  width: 350px;
+  height: 267px;
+  border-radius: 6px;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 34px;
+}
+
+.lot-sceleton__history {
+  width: 350px;
+  height: 452px;
+  border-radius: 6px;
+  background-color: rgba(243, 244, 246, 1);
 }
 
 /* История ставок */

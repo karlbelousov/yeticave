@@ -6,9 +6,9 @@ export default async function NavList() {
 
   return (
     <ul className="nav__list container">
-      {categories.map(({ id, category_name }) => (
+      {categories.map(({ id, name_category }) => (
         <li className="nav__item" key={id}>
-          <Link href={`/category/${id}`}>{category_name}</Link>
+          <Link href={`/category/${id}`}>{name_category}</Link>
         </li>
       ))}
     </ul>

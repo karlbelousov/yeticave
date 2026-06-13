@@ -9,8 +9,8 @@ import clsx from "clsx";
 export default function LotCard({
   id,
   title,
-  category_name,
-  img_url,
+  name_category,
+  img,
   start_price,
   date_finish,
 }: Lot) {
@@ -19,10 +19,10 @@ export default function LotCard({
   return (
     <li className="lots__item lot">
       <div className="lot__image">
-        <Image src={`/${img_url}`} width={350} height={260} alt={title} />
+        <Image src={img} width={350} height={260} alt={title} />
       </div>
       <div className="lot__info">
-        <span className="lot__category">{category_name}</span>
+        <span className="lot__category">{name_category}</span>
         <h3 className={`lot__title ${openSans700.className}`}>
           <Link className="text-link" href={`/lot/${id}`}>
             {title}
@@ -35,8 +35,15 @@ export default function LotCard({
               {formatPrice(start_price)}
             </span>
           </div>
-          <div className={clsx("lot__timer timer", hours < 1 && "timer--finishing")}>
-            {hours <= 9 ? `0${hours}` : hours}{" : "}{minutes <= 9 ? `0${minutes}` : minutes}
+          <div
+            className={clsx(
+              "lot__timer timer",
+              hours < 1 && "timer--finishing",
+            )}
+          >
+            {hours <= 9 ? `0${hours}` : hours}
+            {" : "}
+            {minutes <= 9 ? `0${minutes}` : minutes}
           </div>
         </div>
       </div>

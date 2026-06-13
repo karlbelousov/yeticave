@@ -1,14 +1,25 @@
 export type Lot = {
-  id: string;
+  id: number;
   title: string;
-  category_name: string;
+  name_category: string;
   start_price: number;
-  img_url: string;
+  lot_description: string;
+  img: string;
   date_finish: string;
+  step: number;
 };
 
 export type Category = {
-  id: string;
-  category_name: string;
+  id: number;
+  name_category: string;
   character_code: string;
+};
+
+export type User = {
+  id: number;
+  date_registration: string;
+  email: string;
+  user_name: string;
+  user_password: string;
+  contacts: string;
 };
